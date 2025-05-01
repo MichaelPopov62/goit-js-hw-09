@@ -19,8 +19,11 @@
 body {
   display: flex;
   flex-direction: column;
-  min-width: 100vw;
-  min-height: 100vh;
+  /* min-width: 100vw;
+  min-height: 100vh; */
+    /* flex-direction: row; */
+      justify-content: center;
+      align-items: center;
   margin: 0;
 }
 
@@ -30,3 +33,47 @@ main {
 main:has(.back-link) {
   text-align: center;
 }
+ /* Додаємо прості стилі для галереї */
+
+
+ .gallery {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 16px;
+   list-style: none;
+   padding: 0;
+   margin: 0 auto;
+   width: 100%;
+   max-width: 1200px;
+
+ }
+
+ .gallery-item {
+   flex: 1 1 calc(250px - 16px);
+   max-width: calc(250px - 16px);
+   box-sizing: border-box;
+   overflow: hidden;
+   /* border-radius: 8px; */
+ }
+
+ .gallery-link {
+   text-decoration: none;
+   display: block;
+ }
+
+ .gallery-image {
+   width: 100%;
+   height: auto;
+   /* border-radius: 8px; */
+   transition: transform 0.3s ease;
+
+ }
+
+ .gallery-image:hover {
+   transform: scale(1.05);
+ }
+ .main-title{
+  margin-top: 24px;
+  margin-bottom: 24px;
+ }

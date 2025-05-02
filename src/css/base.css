@@ -21,59 +21,157 @@ body {
   flex-direction: column;
   /* min-width: 100vw;
   min-height: 100vh; */
-    /* flex-direction: row; */
-      justify-content: center;
-      align-items: center;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
   margin: 0;
 }
 
 main {
   flex-grow: 1;
 }
+
 main:has(.back-link) {
   text-align: center;
 }
- /* Додаємо прості стилі для галереї */
+
+/* Додаємо прості стилі для галереї */
 
 
- .gallery {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   gap: 16px;
-   list-style: none;
-   padding: 0;
-   margin: 0 auto;
-   width: 100%;
-   max-width: 1200px;
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
 
- }
+}
 
- .gallery-item {
-   flex: 1 1 calc(250px - 16px);
-   max-width: calc(250px - 16px);
-   box-sizing: border-box;
-   overflow: hidden;
-   /* border-radius: 8px; */
- }
+.gallery-item {
+  flex: 1 1 calc(376px - 16px);
+  max-width: calc(376px - 16px);
+  box-sizing: border-box;
+  overflow: hidden;
+  /* border-radius: 8px; */
+}
 
- .gallery-link {
-   text-decoration: none;
-   display: block;
- }
+.gallery-link {
+  text-decoration: none;
+  display: block;
+}
 
- .gallery-image {
-   width: 100%;
-   height: auto;
-   /* border-radius: 8px; */
-   transition: transform 0.3s ease;
+.gallery-image {
+  width: 360px;
+  height: 200px;
+  /* border-radius: 8px; */
+  transition: transform 0.3s ease;
 
- }
+}
 
- .gallery-image:hover {
-   transform: scale(1.05);
- }
- .main-title{
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+.main-title {
   margin-top: 24px;
   margin-bottom: 24px;
- }
+
+}
+
+.back-link {
+  background-color: rgb(158, 204, 232);
+}
+
+/* Темний фон для модального вікна */
+.sl-overlay {
+  background-color: rgba(46, 47, 66, 0.8) !important;
+}
+
+.sl-image img {
+  width: 100vw;
+
+  height: 100vh;
+
+  object-fit: contain;
+
+}
+
+
+  .feedback-form {
+    max-width: 408px;
+    /* Максимальна ширина форми */
+    margin: 50px auto;
+    /* Центрування на сторінці */
+    padding: 24px;
+    /* Відступи всередині */
+    
+    border: 1px solid #ccc;
+    /* Сіра рамка */
+    border-radius: 8px;
+    /* Закруглені кути */
+    background: #f9f9f9;
+    /* Світлий фон */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Легка тінь */
+    font-family: Arial, sans-serif;
+    /* Шрифт */
+  }
+
+
+/* Стиль для міток */
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  text-align: left;
+  margin-bottom: 8px;
+}
+/* Стиль для полів вводу */
+.feedback-form input {
+  width: 350px;
+  height: 30px;
+  padding: 4px;
+  font-size: 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  background: #fff;
+  margin-top: 8px;
+}
+
+.feedback-form textarea {
+  width: 350px;
+  height: 70px;
+  padding: 4px;
+  font-size: 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  background: #fff;
+  margin-top: 8px;
+}
+/* Стиль для кнопки */
+.feedback-form button {
+  display: block;
+  width: 95px;
+  height: 40px;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: #007bff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 16px;
+}
+.feedback-form button:hover {
+  background: #0056b3;
+}

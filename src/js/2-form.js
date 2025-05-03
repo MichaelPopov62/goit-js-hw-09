@@ -60,7 +60,7 @@ checkForm();
   const { name, value } = evt.target;
 
 //перевіряємо подію input
-  console.log(`Подія input: Поле - ${name}, Знвчення - ${value}`);
+  console.log(`Подія input: Поле - ${name}, Знaчення - ${value}`);
 
 /*перевіряю чи має елемент атрібут "name".Для того щоб працювати з очікуваними елементами форми*/
   if (!name) {
